@@ -1,0 +1,77 @@
+{
+    "menus": [
+        {
+            "id": "1",
+            "title": "buffalo wings",
+            "img": "https://static.olocdn.net/menu/applebees/bba18dd29dd2b5aa0fc73567e140349d.jpg",
+            "price": "$14.99",
+            "calories": "560"
+        },
+
+         {
+            "id": "2",
+            "title": "steak and fries",
+            "img": "https://images.pexels.com/photos/3821692/pexels-photo-3821692.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "price": "$13.99",
+            "calories": "638"
+        },
+
+          {
+            "id": "3",
+            "title": "hamburger",
+            "img": "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "price": "$14.99",
+            "calories": "746"
+        },
+        {
+            "id": "4",
+            "title": "chicken and rice",
+            "img": "https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "price": "$15.99",
+            "calories": "825"
+        },
+        {
+            "id": "5",
+            "title": "eggs and rice",
+            "img": "https://images.pexels.com/photos/1410235/pexels-photo-1410235.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "price": "$12.99",
+            "calories": "725"
+        },
+        {
+            "id": "6",
+            "title": "macaroni",
+            "img": "https://images.pexels.com/photos/3590401/pexels-photo-3590401.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "price": "$13.99",
+            "calories": "625"
+        },
+        {
+            "id": "7",
+            "title": "pancake",
+            "img": "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "price": "$12.99",
+            "calories": "569"
+        },
+        {
+            "id": "8",
+            "title": "salad",
+            "img": "https://images.pexels.com/photos/406152/pexels-photo-406152.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "price": "$8.99",
+            "calories": "325" 
+        },
+        {
+            "id": "9",
+            "title": "crepes",
+            "img": "https://images.pexels.com/photos/3807397/pexels-photo-3807397.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "price": "$11.99",
+            "calories": "425"
+        },
+        {
+            "id": "10",
+            "title": "steak and veggies",
+            "img": "https://images.pexels.com/photos/3659862/pexels-photo-3659862.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "price": "$16.99",
+            "calories": "825"
+        }
+
+    ]
+}

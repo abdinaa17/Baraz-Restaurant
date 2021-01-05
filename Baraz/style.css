@@ -1,0 +1,488 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --main-dark: #404142;
+  --main-red: #ab192d;
+  --main-white: #fff;
+  --body-clr: #f4f4f4;
+
+  --text-fs-sm: 1.1em;
+  --text-fs-md: 1.2em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-clr);
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--text-fs);
+  max-width: 100%;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+ul li {
+  list-style: none;
+}
+
+main {
+  overflow-x: hidden;
+}
+header {
+  background-color: var(--main-dark);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 13vh;
+  text-transform: uppercase;
+}
+
+.logo {
+  font-size: 1.2em;
+  margin: 2rem 0 0 1rem;
+}
+.logo img {
+  width: 10rem;
+  height: 5rem;
+  cursor: pointer;
+}
+.links a:hover {
+  color: var(--main-red);
+}
+.colored {
+  color: var(--main-red);
+}
+.cart {
+  color: var(--main-white);
+  position: relative;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.cart span {
+  background-color: var(--main-red);
+  color: var(--main-white);
+  position: absolute;
+  bottom: -30%;
+  right: 0;
+  font-size: 1.2em;
+  padding: 0 2px;
+  border-radius: 5px;
+}
+.hamburger {
+  margin-right: 1rem;
+  color: var(--main-white);
+  cursor: pointer;
+}
+/* Hero begin */
+#hero {
+  background-color: var(--main-red);
+  color: var(--main-white);
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text {
+  line-height: 1.6;
+  animation: fromTop 1s;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero-text h1,
+.hero {
+  font-size: 2em;
+}
+
+.hero-text p,
+.hero-text h1 {
+  margin: 1rem 0.5rem 0;
+}
+
+.open-hours {
+  font-size: var(--text-fs-md);
+  font-weight: bolder;
+}
+.hero-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-top: 2rem;
+  object-fit: cover;
+  animation: fromBottom 1s;
+}
+
+/* Menu */
+#menu {
+  max-width: inherit;
+}
+.menu-description {
+  line-height: 1.2;
+  text-align: center;
+}
+
+.menu-description h1 {
+  font-size: 2em;
+  margin: 1rem 0;
+  text-transform: capitalize;
+  font-weight: bolder;
+}
+
+.menu-description p {
+  font-size: var(--text-fs);
+}
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.card {
+  margin: 1.5rem auto;
+  height: 20rem;
+  width: 20rem;
+  max-width: 100%;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+  padding: 0rem 5rem;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.card p,
+img {
+  width: 15rem;
+}
+.card img {
+  height: 10rem;
+  object-fit: cover;
+  object-position: center center;
+  margin: 1rem 0;
+}
+.card-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3rem;
+  margin: 0 2rem;
+  text-align: center;
+  width: 13rem;
+}
+
+.card-back {
+  background-color: rgb(238, 223, 157);
+  color: #000;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  top: 0;
+  transition: transform 0.3s ease;
+  transform: translateY(-101%);
+}
+.card-back button {
+  color: inherit;
+  font-size: 1.1em;
+  border: 1px solid var(--main-red);
+  background: none;
+  border-radius: 5px;
+  width: 8rem;
+  height: 2.5rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+.card-back button:hover {
+  transform: scale(0.9);
+}
+
+.card:hover .card-back {
+  transform: translateY(-50%);
+}
+
+/* Review Start */
+#review-section {
+  text-align: center;
+  line-height: 1.6;
+  background-image: url(https://images.pexels.com/photos/4065400/pexels-photo-4065400.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--main-white);
+  position: relative;
+  z-index: 0;
+}
+#review-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.review-container {
+  height: 25rem;
+  width: 30rem;
+  max-width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.review-item {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.review {
+  width: 30rem;
+}
+.review img {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  margin: 0.5rem 1rem 0 0;
+}
+.review p {
+  margin-top: 0.5rem;
+  max-width: 100%;
+}
+.fa-quote-right,
+.fa-quote-left {
+  color: var(--main-red);
+  display: block;
+}
+
+.customer-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.customer-profile small {
+  position: absolute;
+  bottom: 0;
+  right: 30%;
+  margin-left: 1rem;
+  font-size: 0.7em;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.btn-wrapper button {
+  cursor: pointer;
+  color: #2c3e50;
+  margin: 0 1rem;
+  padding: 0.5rem;
+}
+
+/* Newsletter */
+#newsletter {
+  background-color: var(--main-red);
+  color: var(--main-white);
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+#newsletter h1 {
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+#newsletter h3 {
+  font-weight: bold;
+}
+
+#newsletter form {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#newsletter form input {
+  height: 3rem;
+  font-size: var(--text-fs-sm);
+  text-align: center;
+  outline: none;
+  margin: 0.5rem 0;
+}
+#newsletter form .submit {
+  background: var(--main-dark);
+  border: none;
+  width: 8rem;
+  cursor: pointer;
+  color: var(--main-white);
+}
+
+/* Footer start */
+footer {
+  background-color: var(--main-dark);
+}
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--main-white);
+}
+.footer-wrap p {
+  margin-left: 1rem;
+}
+.footer-links {
+  text-transform: uppercase;
+}
+.footer-wrap a:hover {
+  color: var(--main-red);
+}
+.footer-wrap .socials {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-wrap .socials a:hover {
+  transform: scaleY(-10px);
+}
+@keyframes fromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .links {
+    position: absolute;
+    top: 13vh;
+    right: 0;
+    background-color: var(--main-dark);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+    align-items: center;
+    font-size: 1.2em;
+    font-style: italic;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .show {
+    transform: translateX(0);
+  }
+}
+@media screen and (max-width: 600px) {
+  .review p {
+    max-width: 70%;
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: var(--text-fs-md);
+  }
+  .hamburger {
+    display: none;
+  }
+  .links {
+    display: flex;
+  }
+  .links a {
+    margin: 0 1rem;
+  }
+  .cart {
+    margin-right: 1rem;
+  }
+
+  .hero-container {
+    flex-direction: row;
+    position: relative;
+  }
+
+  .hero-container img {
+    margin-top: 0;
+  }
+  .review p {
+    transform: translateX(20%);
+    margin: 1rem 0;
+  }
+
+  .btn-wrapper {
+    margin-top: 0;
+  }
+  #newsletter {
+    text-align: center;
+  }
+  #newsletter form input {
+    width: 20%;
+  }
+  #newsletter form .submit {
+    margin-left: 0;
+    width: 10%;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-links a {
+    margin: 0 1rem;
+  }
+}
